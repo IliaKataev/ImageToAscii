@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Image to ASCII.">
+  <title>Изображение в ASCII</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <main>
+    <header>
+      <svg class="crest" viewBox="0 0 460 150" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M14 138 176 91 262 13 229 72 425 12 321 68 452 52 306 103 360 111 217 133Z"/>
+        <path d="m82 139 111-37 46-37 67-39-30 46 118-32-93 50 60-6-93 32-69 13Z"/>
+        <path d="m153 139 61-28 39-37-4 25 75-24-54 34 41-6-70 23Z"/>
+        <path d="m176 91 17 11 21 9m48-98-9 61m172-62-31 28m58 12-91 32m-55 19-36 6"/>
+      </svg>
+      <h1>Image to <span>ASCII</span></h1>
+    </header>
+    <svg class="divider" viewBox="0 0 960 16" fill="none" stroke="currentColor"
+         preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 8h459m42 0h459M472 8l8-7 8 7-8 7Z M480 5v6"/>
+    </svg>
+    <section class="surface" aria-label="Конвертер изображений">
+      <div class="toolbar">
+        <input type="file" id="image" accept="image/*">
+        <label for="image" class="file-button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M8 11V2m-4 4 4-4 4 4M2 10v4h12v-4"/>
+          </svg>
+          Выбрать файл
+        </label>
+        <div class="detail">
+          <label for="detail">Детализация</label>
+          <div class="detail-scale">
+            <div class="detail-ticks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <input type="range" id="detail" min="0" max="3" step="1" value="1" aria-valuetext="Средняя">
+          </div>
+          <output id="detail-value" for="detail">Средняя</output>
+        </div>
+      </div>
+      <div class="output" aria-busy="false">
+        <svg id="placeholder" class="placeholder" viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M16 1 31 16 16 31 1 16Z M16 8v16M8 16h16"/>
+        </svg>
+        <p id="status" role="status" hidden></p>
+        <pre id="result" aria-label="ASCII-рисунок" hidden></pre>
+      </div>
+    </section>
+  </main>
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>

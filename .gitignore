@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+TestResults/
+*.user
+
+# Локальные файлы для пробной конвертации
+/local/
+/photo.[jJ][pP][gG]
+/photo.[jJ][pP][eE][gG]
+/photo.[pP][nN][gG]
+/art.txt
